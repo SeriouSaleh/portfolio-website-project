@@ -1,100 +1,11 @@
 
-# Saleh jeddi Portfolio Website
+  # Portfolio web page
 
-Overview
+  This is a code bundle for Portfolio web page. The original project is available at https://www.figma.com/design/a3DKZtOr1NvW4c5Q0rKusQ/Portfolio-web-page.
 
-This project is a personal portfolio website built with a Production-oriented DevOps workflow.
+  ## Running the code
 
-The goal is not only to deploy a website, but also to practice modern DevOps concepts such as containerization,CI/CD, 
-reverse proxy, and automated deployments.
+  Run `npm i` to install the dependencies.
 
-
-#Architecture
-Browser
-    │
-    ▼
-Nginx (Reverse Proxy)
-    │
-    ▼
-Node.js Application
-
-
-#Deployment flow:
-
-Developer
-    │
-    ▼
-GitHub
-    │
-    ▼
-Jenkins (Windows)
-    │
-SSH
-    │
-    ▼
-Ubuntu VM
-    │
-docker compose up -d --build
-    │
-    ▼
-Application Deployment
-
-
-#Technologies
-Node.js
-Docker
-Docker Compose
-Nginx
-Jenkins
-Git
-GitHub
-Ubuntu Server
-SSH
-
-
-#Project Structure
-.
-├── Dockerfile
-├── docker-compose.yml
-├── Jenkinsfile
-├── nginx/
-│   └── nginx.conf
-├── src/
-├── package.json
-└── README.md
-
-
-#Current Features
-Dockerized Node.js application
-Nginx as Reverse Proxy
-Docker Compose orchestration
-Jenkins CI/CD pipeline
-SSH-based deployment
-Automatic application rebuild on deployment
-
-
-#CI/CD Pipeline
-Current deployment process:
-
-Git Push
-      │
-      ▼
-GitHub
-      │
-      ▼
-Jenkins
-      │
-      ▼
-SSH to Ubuntu VM
-      │
-      ▼
-git pull
-      │
-      ▼
-docker compose up -d --build
-
-
-#Networking
-Nginx is the only service exposed to clients.
-Node.js is available only inside the Docker network.
-Communication between containers uses Docker DNS (node-app).
+  Run `npm run dev` to start the development server.
+  

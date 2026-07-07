@@ -2,12 +2,24 @@ pipeline {
     agent any
 
     stages {
+
         stage('Deploy') {
             steps {
                 bat '''
-                ssh anisa@192.168.111.3 "cd /home/anisa/portfolio-website-project && git pull && docker compose up -d --build"
+                ssh anisa@192.168.111.3 "
+                cd ~/portfolio-website-project &&
+                git pull &&
+
+                cd frontend &&
+                npm install &&
+                npm run build &&
+
+                cd .. &&
+                docker compose up -d --build
+                "
                 '''
             }
         }
+
     }
 }
