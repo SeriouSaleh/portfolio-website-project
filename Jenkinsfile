@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('TEST') {
+        stage('Deploy') {
             steps {
-                bat 'echo THIS IS THE NEW JENKINSFILE'
+                bat 'ssh anisa@192.168.111.3 "~/deploy.sh"'
             }
         }
     }
