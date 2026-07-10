@@ -528,7 +528,7 @@ function ContactTab() {
     {
       id: "linkedin",
       label: "LinkedIn",
-      display: "linkedin.com/in/seriousalesaleh",
+      display: "linkedin.com/in/seriousaleh",
       href: "https://www.linkedin.com/in/seriousalesaleh",
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden>
